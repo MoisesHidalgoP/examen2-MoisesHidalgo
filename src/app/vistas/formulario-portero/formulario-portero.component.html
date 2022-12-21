@@ -1,0 +1,74 @@
+
+<div class="container" >
+  <form [formGroup]="datosPortero" class="form-group container w-50 mt-3" >
+    <div class="form-floating mb-3" >
+      <label for="nombre">Nombre</label>
+      <br/>
+      <input type="text" class="form-control" id="nombre" formControlName="nombre" />
+      
+    </div>
+    <div class="form-floating mb-3">
+      <label for="apelldios">Apellidos</label>
+      <br/>
+      <input type="text" class="form-control" id="apellidos" formControlName="apellidos" />
+      
+    </div>
+    <div class="form-floating mb-3">
+      <label for="ciudad">Ciudad</label>
+      <br/>
+      <input type="text" class="form-control" id="ciudad" formControlName="ciudad" />
+     
+    </div>
+    <div class="form-floating mb-3">
+      <label for="telefono">Telefono</label>
+      <br/>
+      <input type="text" class="form-control" id="telefono" formControlName="telefono" />
+      
+    </div>
+    <div class="form-floating mb-3">
+      <label for="email">Email</label>
+      <br/>
+      <input
+        type="text" class="form-control"
+        id="email"
+        formControlName="email"
+      />
+     
+    </div>
+    <div class="form-floating mb-3" >
+      <label for="mesDisponible">Mes disponible</label>
+      <br/>
+      <input type="text" class="form-control" id="mesDisponible" formControlName="mesDisponible" />
+      
+    </div>
+    <br/>
+    <div>
+      <button
+      class="btn btn-primary m-2"
+      (click)="guardar()"
+      [disabled]="!datosPortero.valid"
+      
+     
+    >
+      Guardar
+    </button>
+
+    <br/>
+
+    <button
+  class="btn btn-warning"
+    (click)="borrar()"
+    [disabled]="!datosPortero.valid"
+  >
+    Borrar
+  </button>
+    <br/>
+   
+    <button class="btn btn-danger m-2" (click)="cancel()">Volver</button>
+    </div>
+    
+  
+    
+  </form>
+</div>
+
